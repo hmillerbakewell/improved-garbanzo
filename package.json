@@ -1,0 +1,22 @@
+{
+  "name": "path-interpolate",
+  "version": "1.0.0",
+  "description": "Converts a given path to one interpolated with consistent speed",
+  "main": "path-interpolate.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hmillerbakewell/path-interpolate.git"
+  },
+  "keywords": [
+    "freehand",
+    "path",
+    "interpolate"
+  ],
+  "author": "hmillerbakewell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hmillerbakewell/path-interpolate/issues"
+  },
+  "homepage": "https://github.com/hmillerbakewell/path-interpolate#readme"
+}
