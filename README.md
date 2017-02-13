@@ -26,7 +26,7 @@ to ensure an even spread of waypoints.
 
 
 ~~~js
-pathInterpolate = require("./path-interpolate.js")
+pathInterpolate = require("./path-interpolate")
 
 pathInterpolate("0 0 10 0 10 10 0 10", 5)
 ~~~
