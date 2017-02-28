@@ -11,7 +11,7 @@ var pathInterpolate = function (inputPathString, interpolationDistance) {
     start: [x, y]                   Start coordinates
     end: [x, y]                     End coordinates
     length: Number                  Length of original path
-    bbox: [x, y, wridth, height]    Bounding box of original path
+    bbox: [x, y, width, height]    Bounding box of original path
     waypoints: [[x1, y1], [x2, y2], ... ]
   The path described by waypoints is an interpolation of the input path
   The interpolation distance is _guided_ by ${interpolationDistance}
@@ -22,7 +22,7 @@ var pathInterpolate = function (inputPathString, interpolationDistance) {
   // Insist that the interpolation distance is non-zero positive
   interpolationDistance = Math.max(0, interpolationDistance) || 1
   try {
-    var _splitNumbers = inputPathString.split(' ')
+    var _splitNumbers = inputPathString.split(/[ ,]/g)
   } catch (e) {
     throw new Error('First argument for pathInterpolate not a string')
   }
@@ -44,8 +44,8 @@ var pathInterpolate = function (inputPathString, interpolationDistance) {
   var lastY = start[1]
 
   for (var i = 0; i < _splitNumbers.length; i += 2) {
-    x = _splitNumbers[i]
-    y = _splitNumbers[i + 1]
+    x = parseFloat(_splitNumbers[i])
+    y = parseFloat(_splitNumbers[i + 1])
     // Bounding Box
     bbLeft = Math.min(bbLeft, x)
     bbRight = Math.max(bbRight, x)
@@ -68,8 +68,8 @@ var pathInterpolate = function (inputPathString, interpolationDistance) {
   var wx, wy
   waypoints.push(start)
   for (i = 0; i < _splitNumbers.length; i += 2) {
-    x = _splitNumbers[i]
-    y = _splitNumbers[i + 1]
+    x = parseFloat(_splitNumbers[i])
+    y = parseFloat(_splitNumbers[i + 1])
     // Distance
     delta = deltaList[i / 2]
     distanceSinceLastWaypoint += delta

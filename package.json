@@ -1,6 +1,6 @@
 {
   "name": "path-interpolate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Converts a given path to one interpolated with consistent speed",
   "main": "path-interpolate.js",
   "scripts": {},
@@ -18,5 +18,6 @@
   "bugs": {
     "url": "https://github.com/hmillerbakewell/path-interpolate/issues"
   },
-  "homepage": "https://github.com/hmillerbakewell/path-interpolate#readme"
+  "homepage": "https://github.com/hmillerbakewell/path-interpolate#readme",
+  "dependencies": {}
 }
